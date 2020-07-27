@@ -1,5 +1,4 @@
 ///exercise 1
-
 function maxDepth() {
   let count = 0;
   let depth = 1;
@@ -19,30 +18,28 @@ function maxDepth() {
     } return depth;
   }
   const witcher = {
-  name: 'Geralt',
-  profession: 'witcher',
-  schoollAndSword: {
-    area: {
-      Kaedven: 'Kaer Morhen',
-      schoolName: 'school of the wolf',
+    name: 'Geralt',
+    profession: 'witcher',
+    schoollAndSword: {
+      area: {
+        Kaedven: 'Kaer Morhen',
+        schoolName: 'school of the wolf',
+      },
+      mentor: 'Vesemir',
+      students: 'Cirilla',
+      swords: {
+        silverSword: 'for monster',
+        steelSword: 'for human,and some monsters'
+      },
     },
-    mentor: 'Vesemir',
-    students: 'Cirilla',
-    swords: {
-      silverSword: 'for monster',
-      steelSword: 'for human,and some monsters'
-    },
-  },
-};
+  };
   console.log(getFiniteValue(witcher));
   return depth
-  
+
 }
 maxDepth()
 
 //exrecise 2
-
-
 function comparsionKey() {
   let counter = 0;
   function noСoincidence(object1, object2) {
