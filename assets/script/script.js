@@ -1,5 +1,39 @@
+
+const witcher = {
+  name: 'Geralt',
+  profession: 'witcher',
+  schoollAndSword: {
+    area: {
+      Kaedven: 'Kaer Morhen',
+      schoolName: 'school of the wolf',
+    },
+    mentor: 'Vesemir',
+    students: 'Cirilla',
+    swords: {
+      silverSword: 'for monster',
+      steelSword: 'for human,and some monsters'
+    },
+  },
+};
+
+const witcher2 = {
+  name: 'Vesemir',
+  profession: 'witcher',
+  schoollAndSword: {
+    area: {
+      Kaedven: 'Kaer Morhen',
+      schoolName: 'school of the wolf',
+    },
+    mentor: 'unknows',
+    students: 'Geralt,Eskel',
+    swords: {
+      silverSword: 'for monster',
+      steelSword: 'for human,and some monsters'
+    },
+  },
+};
 ///exercise 1
-function maxDepth() {
+function maxDepth(object) {
   let count = 0;
   let depth = 1;
   function getFiniteValue(object) {
@@ -17,30 +51,13 @@ function maxDepth() {
       }
     } return depth;
   }
-  const witcher = {
-    name: 'Geralt',
-    profession: 'witcher',
-    schoollAndSword: {
-      area: {
-        Kaedven: 'Kaer Morhen',
-        schoolName: 'school of the wolf',
-      },
-      mentor: 'Vesemir',
-      students: 'Cirilla',
-      swords: {
-        silverSword: 'for monster',
-        steelSword: 'for human,and some monsters'
-      },
-    },
-  };
-  console.log(getFiniteValue(witcher));
+  console.log(getFiniteValue(object));
   return depth
-
-}
-maxDepth()
+};
+maxDepth(witcher)
 
 //exrecise 2
-function comparsionKey() {
+function comparsionKey(object1, object2) {
   let counter = 0;
   function noСoincidence(object1, object2) {
     for (let key in object1) {
@@ -51,40 +68,8 @@ function comparsionKey() {
       };
     };
   }
-  const witcher2 = {
-    name: 'Vesemir',
-    profession: 'witcher',
-    schoollAndSword: {
-      area: {
-        Kaedven: 'Kaer Morhen',
-        schoolName: 'school of the wolf',
-      },
-      mentor: 'unknows',
-      students: 'Geralt,Eskel',
-      swords: {
-        silverSword: 'for monster',
-        steelSword: 'for human,and some monsters'
-      },
-    },
-  };
-  const witcher = {
-    name: 'Geralt',
-    profession: 'witcher',
-    schoollAndSword: {
-      area: {
-        Kaedven: 'Kaer Morhen',
-        schoolName: 'school of the wolf',
-      },
-      mentor: 'Vesemir',
-      students: 'Cirilla',
-      swords: {
-        silverSword: 'for monster',
-        steelSword: 'for human,and some monsters'
-      },
-    },
-  };
-  noСoincidence(witcher, witcher2);
+  noСoincidence(object1, object2);
   console.log(counter);
   return counter;
-}
-comparsionKey();
+};
+comparsionKey(witcher, witcher2);
